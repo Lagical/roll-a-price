@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<script src="roll.js"></script>
+<title>Roll a price</title>
+</head>
+<body>
+<h1>Give minimum and maximum prices</h1>
+<form>
+    <label for="fname">Minimum price:</label><br>
+    <input type="text" id="miprice"><br>
+    <label for="lname">Maximum price:</label><br>
+    <input type="text" id="maprice">
+  </form>
+  <button type="button" onclick="getInputValue();">Set values</button>
+    <p id="min"></p>
+    <p id="max"></p>
+    <p id="price"></p>
+<button onclick="random()">Random</button>
+</body>
+</html>
