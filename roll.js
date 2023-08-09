@@ -7,7 +7,14 @@ function getInputValue(){
 }
 
 function random() {
-    const miPrice = Math.ceil(document.getElementById("miprice").value);
-    const maPrice = Math.floor(document.getElementById("maprice").value);
-    document.getElementById("price").innerHTML = Math.floor(Math.random() * (maPrice * 100 - (miPrice+1) * 100) + miPrice * 100) / 100;
+    const miPrice = Math.abs(document.getElementById("miprice").value);
+    const maPrice = Math.abs(document.getElementById("maprice").value);
+    const chance = Math.floor(Math.random() * 100) + 1;
+    if (chance <= 50) {
+        document.getElementById("price").innerHTML = Math.floor(Math.random() * (maPrice * 100 - (miPrice) * 100) + miPrice * 100) / 100;
+    } else if (chance > 50 && chance <= 80){
+        document.getElementById("price").innerHTML = Math.floor(Math.random() * (maPrice * 100 - (miPrice) * 100) + miPrice * 100) / 100;
+    } else {
+        document.getElementById("price").innerHTML = Math.floor(Math.random() * (maPrice * 100 - (miPrice) * 100) + miPrice * 100) / 100;
+    }
   }
