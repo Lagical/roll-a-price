@@ -39,5 +39,4 @@ function getInputValue(){
             li.innerText = history[i];
             list.appendChild(li);
         }
-        console.log(history);
 }
